@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Fav and touch icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="assets/ico/favicon.png">
+<title>六盘山珍</title>
+<!-- Bootstrap core CSS -->
+<link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="assets/css/style.css" rel="stylesheet">
+
+<!-- css3 animation effect for this template -->
+<link href="assets/css/animate.min.css" rel="stylesheet">
+
+<!-- styles needed by carousel slider -->
+<link href="assets/css/owl.carousel.css" rel="stylesheet">
+<link href="assets/css/owl.theme.css" rel="stylesheet">
+
+<!-- styles needed by checkRadio -->
+<link href="assets/css/ion.checkRadio.css" rel="stylesheet">
+<link href="assets/css/ion.checkRadio.cloudy.css" rel="stylesheet">
+
+<!-- styles needed by mCustomScrollbar -->
+<link href="assets/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+<link href="assets/css/soup_index.css" rel="stylesheet">
+
+<!-- Just for debugging purposes. -->
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+<!-- include pace script for automatic web page progress bar  -->
+
+
+
+</head>
+
+<body>
+	
+
+
+<!-- Modal Login start -->
+<div class="modal signUpContent fade" id="ModalLogin" tabindex="-1" role="dialog" >
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
+        <h3 class="modal-title-site text-center" > 登陆 </h3>
+      </div>
+      <div class="modal-body">
+        <div class="form-group login-username">
+          <div >
+            <input name="log" id="login-user" class="form-control input"  size="20" placeholder="用户名" type="text">
+          </div>
+        </div>
+        <div class="form-group login-password">
+          <div >
+            <input name="Password" id="login-password" class="form-control input"  size="20" placeholder="密码" type="password">
+          </div>
+        </div>
+        <div class="form-group">
+          <div >
+            <div class="checkbox login-remember">
+              <label>
+                <input name="rememberme"  value="forever" checked="checked" type="checkbox">
+                记住我 </label>
+            </div>
+          </div>
+        </div>
+        <div >
+          <div >
+            <input id="logInButton" name="submit" class="btn  btn-block btn-lg btn-primary" value="登陆" type="submit">
+          </div>
+        </div>
+        <!--userForm--> 
+        
+      </div>
+      <div class="modal-footer">
+        <p class="text-center"><a data-toggle="modal"  data-dismiss="modal" href="#ModalSignup"> 注册 </a> <br>
+          <a href="forgot-password.html" > 忘记密码 </a> </p>
+      </div>
+    </div>
+    <!-- /.modal-content --> 
+    
+  </div>
+  <!-- /.modal-dialog --> 
+  
+</div>
+<!-- /.Modal Login --> 
+
+<!-- Modal Signup start -->
+<div class="modal signUpContent fade" id="ModalSignup" tabindex="-1" role="dialog" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
+        <h3 class="modal-title-site text-center" > 注册 </h3>
+      </div>
+      <div class="modal-body">
+        <div class="form-group reg-username">
+          <div >
+            <input id="signup-userid" name="login"  class="form-control input"  size="20" placeholder="用户名" type="text">
+          </div>
+        </div>
+        <div class="form-group reg-email">
+          <div >
+            <input id="signup-user-email"name="reg"  class="form-control input"  size="20" placeholder="邮箱" type="text">
+          </div>
+        </div>
+        <div class="form-group reg-password">
+          <div >
+            <input id="signup-password" name="password"  class="form-control input"  size="20" placeholder="密码" type="password">
+          </div>
+        </div>
+        <div class="form-group reg-password">
+          <div >
+            <input id="signup-password-check" name="password"  class="form-control input"  size="20" placeholder="确认密码" type="password">
+          </div>
+        </div>
+        <div class="form-group">
+          <div >
+            <div class="checkbox login-remember">
+              <label>
+                <input name="rememberme" id="rememberme" value="forever" checked="checked" type="checkbox">
+                记住我 </label>
+            </div>
+          </div>
+        </div>
+        <div >
+          <div >
+            <input id="signUpButton" name="submit" class="btn  btn-block btn-lg btn-primary" value="注册" type="submit">
+          </div>
+        </div>
+        <!--userForm--> 
+        
+      </div>
+      <div class="modal-footer">
+        <p class="text-center"> <a data-toggle="modal"  data-dismiss="modal" href="#ModalLogin"> 登陆 </a> </p>
+      </div>
+    </div>
+    <!-- /.modal-content --> 
+    
+  </div>
+  <!-- /.modal-dialog --> 
+  
+</div>
+<!-- /.ModalSignup End --> 
+
+<!-- Fixed navbar start -->
+<div class="navbar navbar-tshop navbar-fixed-top megamenu" role="navigation">
+  <div class="navbar-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6">
+          <div class="pull-left ">
+            <ul class="userMenu ">
+              <li> <a href="#"> <span class="hidden-xs">热线电话</span><i class="glyphicon glyphicon-info-sign hide visible-xs "></i> </a> </li>
+              <li class="phone-number"> <a  href="callto:+8801680531352"> <span> <i class="glyphicon glyphicon-phone-alt "></i></span> <span class="hidden-xs" style="margin-left:5px"> 0951 xxxxxxx </span> </a> </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 no-margin no-padding">
+          <div class="pull-right">
+            <ul class="userMenu">
+              <li> <a href="account-1.html"><span class="hidden-xs"> 我的账户</span> <i class="glyphicon glyphicon-user hide visible-xs "></i></a> </li>
+              <li> <a href="#"  data-toggle="modal" data-target="#ModalLogin"> <span class="hidden-xs">登陆</span> <i class="glyphicon glyphicon-log-in hide visible-xs "></i> </a> </li>
+              <li class="hidden-xs"> <a href="#"  data-toggle="modal" data-target="#ModalSignup"> 注册 </a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/.navbar-top-->
+  
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only"> 导航 </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> </button>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-cart"> <i class="fa fa-shopping-cart colorWhite"> </i> <span class="cartRespons colorWhite"> 购物车 (￥210.00) </span> </button>
+      <a class="navbar-brand " href="index.html"> <img src="images/logo.png" alt="TSHOP"> </a> 
+      
+      <!-- this part for mobile -->
+      <div class="search-box pull-right hidden-lg hidden-md hidden-sm">
+        <div class="input-group">
+          <button class="btn btn-nobg getFullSearch" type="button"> <i class="fa fa-search"> </i> </button>
+        </div>
+        <!-- /input-group --> 
+        
+      </div>
+    </div>
+    
+    <!-- this part is duplicate from cartMenu  keep it for mobile -->
+    <!--/.navbar-cart-->
+    
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"> <a href="#"> 首页 </a> </li>
+        <li class="active"> <a href="#"> 产品溯源 </a> </li>
+        <li class="active"> <a href="#"> 在线购买 </a> </li>
+        <li class="active"> <a href="#"> 市场新闻 </a> </li>
+        <li class="active"> <a href="#"> 农户风采 </a> </li>
+        <li class="active"> <a href="#"> 关于我们 </a> </li>
+        
+      </ul>
+      
+      <!--- this part will be hidden for mobile version -->
+      <div class="nav navbar-nav navbar-right hidden-xs">
+        <div class="dropdown  cartMenu "> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-shopping-cart"> </i> <span class="cartRespons"> 购物车 (￥210.00) </span> <b class="caret"> </b> </a>
+          <!--/.dropdown-menu--> 
+        </div>
+        <!--/.cartMenu-->
+        
+        <div class="search-box">
+          <div class="input-group">
+            <button class="btn btn-nobg getFullSearch" type="button"> <i class="fa fa-search"> </i> </button>
+          </div>
+          <!-- /input-group --> 
+          
+        </div>
+        <!--/.search-box --> 
+      </div>
+      <!--/.navbar-nav hidden-xs--> 
+    </div>
+    <!--/.nav-collapse --> 
+    
+  </div>
+  <!--/.container -->
+  
+  <div class="search-full text-right"> <a class="pull-right search-close"> <i class=" fa fa-times-circle"> </i> </a>
+    <div class="searchInputBox pull-right">
+      <input type="search"  data-searchurl="search?=" name="q" placeholder="start typing and hit enter to search" class="search-input">
+      <button class="btn-nobg search-btn" type="submit"> <i class="fa fa-search"> </i> </button>
+    </div>
+  </div>
+  <!--/.search-full--> 
+  
+</div>
+<!-- /.Fixed navbar  -->
+
+<div class="banner">
+  <div class="full-container">
+    <div class="slider-content">
+      <ul id="pager2" class="container">
+      </ul>
+      <!-- prev/next links --> 
+      
+      <span class="prevControl sliderControl"> <i class="fa fa-angle-left fa-3x "></i></span> <span class="nextControl sliderControl"> <i class="fa fa-angle-right fa-3x "></i></span>
+      <div class="slider slider-v1" 
+      data-cycle-swipe=true
+      data-cycle-prev=".prevControl"
+      data-cycle-next=".nextControl" data-cycle-loader="wait">
+        <div class="slider-item slider-item-img1"> <img src="images/slider/slider0.jpg" class="img-responsive parallaximg sliderImg" alt="img"> </div>
+        <div class="slider-item slider-item-img1">
+          <div class="sliderInfo">
+            <div class="container">
+              <div class="col-lg-12 col-md-12 col-sm-12 sliderTextFull ">
+                <div class="inner text-center">
+                  <div class="topAnima animated">
+                    <h1 class="uppercase xlarge">新闻标题</h1>
+                    <h3 class="hidden-xs"> 新闻内容 </h3>
+                  </div>
+                 </div>
+              </div>
+            </div>
+          </div>
+          <img src="images/slider/slider1.jpg" class="img-responsive parallaximg sliderImg" alt="img"> </div>
+        <!--/.slider-item-->
+        
+        <div class="slider-item slider-item-img2 ">
+          <div class="sliderInfo">
+            <div class="container">
+              <div class="col-lg-12 col-md-12 col-sm-12 sliderTextFull  ">
+                <div class="inner dark maxwidth500 text-center animated topAnima">
+                  <div class=" ">
+                    <h1 class="uppercase xlarge"> 新闻标题</h1>
+                    <h3 class="hidden-xs"> 新闻内容 </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img src="images/slider/slider3.jpg" class="img-responsive parallaximg sliderImg" alt="img"> </div>
+        <!--/.slider-item-->
+        
+        <div class="slider-item slider-item-img3 ">
+          <div class="sliderInfo">
+            <div class="container">
+              <div class="col-lg-5 col-md-4 col-sm-6 col-xs-8   pull-left sliderText white hidden-xs">
+                <div class="inner">
+      
+                  <h3 class="price "> 新闻标题</h3>
+                  <p class="hidden-xs">新闻内容 </p>
+                 </div>
+              </div>
+            </div>
+          </div>
+          <img src="images/slider/slider4.jpg" class="img-responsive parallaximg sliderImg"  alt="img"> </div>
+        <!--/.slider-item-->
+        
+        <div class="slider-item slider-item-img3">
+          <div class="sliderInfo">
+            <div class="container">
+              <div class="col-lg-5 col-md-6 col-sm-5 col-xs-5 pull-left sliderText blankstyle transformRight">
+                <div class="inner text-right"> <img src="images/slider/color.png" class="img-responsive" alt="img"> </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-5 col-xs-7   pull-left sliderText blankstyle color-white">
+                <div class="inner">
+                  <h3 class="uppercase topAnima animated ">新闻标题</h3>
+                  <p class="bot tomAnima animated opacity0 hidden-xs"> 新闻内容 </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img src="images/slider/6.jpg" class="img-responsive parallaximg sliderImg"  alt="img"> </div>
+      </div>
+      <!--/.slider slider-v1--> 
+    </div>
+    <!--/.slider-content--> 
+  </div>
+  <!--/.full-container--> 
+</div>
+<!--/.banner style1-->
+
+<div class="container main-container" style="height:400px"> 
+  
+  
+<!--   TEST  -->
+ test: <span id="test">nothing</span>
+ <input type="button" id="buttontest" onclick="buttontest()"/> 
+
+
+  
+  <!-- Main component call to action -->
+  
+  <div class="row featuredPostContainer globalPadding style2">
+    <h3 class="section-title style2 text-center"><span>产品溯源</span></h3>
+    <!--/.productslider--> 
+    <div  id="tracking" class="container main-container">
+      <input  type="text" placeholder="请输入10位数字溯源码"></input>
+      <button id="track" class="btn btn-sucess">查询</button>
+      <div id="sample"><img src="images/barcode.png"></img></div>
+    </div>
+  </div>
+  <!--/.featuredPostContainer--> 
+</div>
+<!-- /main container -->
+
+<div class="parallax-section parallax-image-1">
+  <div class="container">
+    <div class="row ">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="parallax-content clearfix">
+       </div>
+      </div>
+    </div>
+    <!--/.row--> 
+  </div>
+  <!--/.container--> 
+</div>
+<!--/.parallax-image-1-->
+
+<div class="container main-container"> 
+  
+  <!-- Main component call to action -->
+  
+  <div class="morePost row featuredPostContainer style2 globalPaddingTop " >
+    <h3 class="section-title style2 text-center"><span>明星产品</span></h3>
+    <div class="container">
+      <div class="row xsResponse">
+        <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+          <div class="product">
+          
+            <div class="image">  
+          <div class="quickview">
+              <a title="Quick View" class="btn btn-xs  btn-quickview" data-target="#product-details-modal" data-toggle="modal"> 快速查看 </a>
+             </div><a href="product-details.html"><img src="images/product/1.jpg" alt="img" class="img-responsive"></a>
+              <div class="promotion"> <span class="new-product"> 新品</span> <span class="discount">8.5折</span> </div>
+            </div>
+            <div class="description">
+              <h4><a href="product-details.html">产品名称</a></h4>
+              <p>产品描述</p>
+            </div>
+            <div class="price"> <span>￥25</span> <span class="old-price">$75</span> </div>
+            <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> 加入购物车 </span> </a> </div>
+          </div>
+        </div>
+        <!--/.item-->
+        <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+          <div class="product">    
+          <div class="image">  
+          <div class="quickview">
+              <a title="Quick View" class="btn btn-xs  btn-quickview" data-target="#product-details-modal" data-toggle="modal"> 快速查看 </a>
+             </div><a href="product-details.html"><img src="images/product/2.jpg" alt="img" class="img-responsive"></a>
+              <div class="promotion"> <span class="new-product"> 新品</span> <span class="discount">8.5折</span> </div>
+            </div>
+            <div class="description">
+              <h4><a href="product-details.html">产品名称</a></h4>
+              <p>产品描述</p>
+            </div>
+            <div class="price"> <span>￥25</span> <span class="old-price">$75</span> </div>
+            <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> 加入购物车 </span> </a> </div>
+          </div>
+        </div>
+        <!--/.item-->
+        <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+          <div class="product">
+          
+            <div class="image">  
+          <div class="quickview">
+              <a title="Quick View" class="btn btn-xs  btn-quickview" data-target="#product-details-modal" data-toggle="modal"> 快速查看 </a>
+             </div><a href="product-details.html"><img src="images/product/3.jpg" alt="img" class="img-responsive"></a>
+              <div class="promotion"> <span class="new-product"> 新品</span> <span class="discount">8.5折</span> </div>
+            </div>
+            <div class="description">
+              <h4><a href="product-details.html">产品名称</a></h4>
+              <p>产品描述</p>
+            </div>
+            <div class="price"> <span>￥25</span> <span class="old-price">$75</span> </div>
+            <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> 加入购物车 </span> </a> </div>
+          </div>
+        </div>
+        <!--/.item-->
+        <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+          <div class="product">
+          
+            <div class="image">  
+          <div class="quickview">
+              <a title="Quick View" class="btn btn-xs  btn-quickview" data-target="#product-details-modal" data-toggle="modal"> 快速查看 </a>
+             </div><a href="product-details.html"><img src="images/product/4.jpg" alt="img" class="img-responsive"></a>
+              <div class="promotion"> <span class="new-product"> 新品</span> <span class="discount">8.5折</span> </div>
+            </div>
+            <div class="description">
+              <h4><a href="product-details.html">产品名称</a></h4>
+              <p>产品描述</p>
+            </div>
+            <div class="price"> <span>￥25</span> <span class="old-price">$75</span> </div>
+            <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> 加入购物车 </span> </a> </div>
+          </div>
+        </div>
+        <!--/.item-->
+        <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+          <div class="product">
+          
+            <div class="image">  
+          <div class="quickview">
+              <a title="Quick View" class="btn btn-xs  btn-quickview" data-target="#product-details-modal" data-toggle="modal"> 快速查看 </a>
+             </div><a href="product-details.html"><img src="images/product/5.jpg" alt="img" class="img-responsive"></a>
+              <div class="promotion"> <span class="new-product"> 新品</span> <span class="discount">8.5折</span> </div>
+            </div>
+            <div class="description">
+              <h4><a href="product-details.html">产品名称</a></h4>
+              <p>产品描述</p>
+            </div>
+            <div class="price"> <span>￥25</span> <span class="old-price">$75</span> </div>
+            <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> 加入购物车 </span> </a> </div>
+          </div>
+        </div>
+        <!--/.item-->
+        <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+          <div class="product">
+          
+            <div class="image">  
+          <div class="quickview">
+              <a title="Quick View" class="btn btn-xs  btn-quickview" data-target="#product-details-modal" data-toggle="modal"> 快速查看 </a>
+             </div><a href="product-details.html"><img src="images/product/6.jpg" alt="img" class="img-responsive"></a>
+              <div class="promotion"> <span class="new-product"> 新品</span> <span class="discount">8.5折</span> </div>
+            </div>
+            <div class="description">
+              <h4><a href="product-details.html">产品名称</a></h4>
+              <p>产品描述</p>
+            </div>
+            <div class="price"> <span>￥25</span> <span class="old-price">$75</span> </div>
+            <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> 加入购物车 </span> </a> </div>
+          </div>
+        </div>
+        <!--/.item-->
+        <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+          <div class="product">
+          
+            <div class="image">  
+          <div class="quickview">
+              <a title="Quick View" class="btn btn-xs  btn-quickview" data-target="#product-details-modal" data-toggle="modal"> 快速查看 </a>
+             </div><a href="product-details.html"><img src="images/product/7.jpg" alt="img" class="img-responsive"></a>
+              <div class="promotion"> <span class="new-product"> 新品</span> <span class="discount">8.5折</span> </div>
+            </div>
+            <div class="description">
+              <h4><a href="product-details.html">产品名称</a></h4>
+              <p>产品描述</p>
+            </div>
+            <div class="price"> <span>￥25</span> <span class="old-price">$75</span> </div>
+            <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> 加入购物车 </span> </a> </div>
+          </div>
+        </div>
+        <!--/.item-->
+        <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+          <div class="product">
+          
+            <div class="image">  
+          <div class="quickview">
+              <a title="Quick View" class="btn btn-xs  btn-quickview" data-target="#product-details-modal" data-toggle="modal"> 快速查看 </a>
+             </div><a href="product-details.html"><img src="images/product/8.jpg" alt="img" class="img-responsive"></a>
+              <div class="promotion"> <span class="new-product"> 新品</span> <span class="discount">8.5折</span> </div>
+            </div>
+            <div class="description">
+              <h4><a href="product-details.html">产品名称</a></h4>
+              <p>产品描述</p>
+            </div>
+            <div class="price"> <span>￥25</span> <span class="old-price">$75</span> </div>
+            <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> 加入购物车 </span> </a> </div>
+          </div>
+        </div>
+        <!--/.item-->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!--/.container--> 
+  </div>
+  <!--/.featuredPostContainer-->
+  
+  <hr class="no-margin-top">
+  <!--/.section-block--> 
+  
+</div>
+<!--main-container-->
+
+<div class="parallax-section parallax-image-2">
+  <div class="w100 parallax-section-overley">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="parallax-content clearfix">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/.parallax-section-->
+
+  <!-- Product Details Modal  -->
+    <div class="modal fade" id="product-details-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button aria-hidden="true" data-dismiss="modal" class="close" type="button"> × </button>
+                <div class="col-lg-5 col-md-5 col-sm-5  col-xs-12">
+
+                    <!-- product Image -->
+
+                    <div class="main-image  col-lg-12 no-padding style3">
+                        <a class="product-largeimg-link" href="product-details.html"><img src="images/zoom/zoom1.jpg" class="img-responsive product-largeimg" alt="img">
+                        </a>
+                    </div>
+                    <!--/.main-image-->
+                    
+                    <div class="modal-product-thumb">
+                        <a class="thumbLink selected"><img data-large="images/zoom/zoom1.jpg" alt="img" class="img-responsive" src="images/zoom/zoom1.jpg">
+                        </a>
+                        <a class="thumbLink"><img data-large="images/zoom/zoom2.jpg" alt="img" class="img-responsive" src="images/zoom/zoom2.jpg">
+                        </a>
+                        <a class="thumbLink"><img data-large="images/zoom/zoom3.jpg" alt="img" class="img-responsive" src="images/zoom/zoom3.jpg">
+                        </a>
+                    </div> <!--/.modal-product-thumb-->
+                </div> <!--/ product Image-->
+               
+                
+                <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 modal-details no-padding">
+                    <div class="modal-details-inner">
+                        <h1 class="product-title"> Lorem ipsum dolor sit amet</h1>
+                        <h3 class="product-code">Product Code : DEN1098</h3>
+                        <div class="product-price"> <span class="price-sales"> $70</span> <span class="price-standard">$95</span> </div>
+                        <div class="details-description">
+                            <p>In scelerisque libero ut elit porttitor commodo Suspendisse laoreet magna. </p>
+                        </div>
+                        <div class="color-details"> <span class="selected-color"><strong>COLOR</strong></span>
+                            <ul class="swatches Color">
+                                <li class="selected">
+                                    <a style="background-color:#f1f40e"> </a>
+                                </li>
+                                <li>
+                                    <a style="background-color:#adadad"> </a>
+                                </li>
+                                <li>
+                                    <a style="background-color:#4EC67F"> </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--/.color-details-->
+
+                        <div class="productFilter productFilterLook2">
+                            <div class="filterBox">
+                                <select>
+                                    <option value="strawberries" selected>Quantity</option>
+                                    <option value="mango">1</option>
+                                    <option value="bananas">2</option>
+                                    <option value="watermelon">3</option>
+                                    <option value="grapes">4</option>
+                                    <option value="oranges">5</option>
+                                    <option value="pineapple">6</option>
+                                    <option value="peaches">7</option>
+                                    <option value="cherries">8</option>
+                                </select>
+                            </div>
+                            <div class="filterBox">
+                                <select>
+                                    <option value="strawberries" selected>Size</option>
+                                    <option value="mango">XL</option>
+                                    <option value="bananas">XXL</option>
+                                    <option value="watermelon">M</option>
+                                    <option value="apples">L</option>
+                                    <option value="apples">S</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- productFilter -->
+
+                        <div class="cart-actions">
+                            <div class="addto">
+                                <button onclick="productAddToCartForm.submit(this);" class="button btn-cart cart first" title="Add to Cart" type="button">Add to Cart</button>
+                                <a class="link-wishlist wishlist">Add to Wishlist</a> </div>
+                        </div>
+                        <!--/.cart-actions-->
+
+                        <div class="product-share clearfix">
+                            <p> SHARE </p>
+                            <div class="socialIcon">
+                                <a href="#"> <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#"> <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="#"> <i class="fa fa-google-plus"></i>
+                                </a>
+                                <a href="#"> <i class="fa fa-pinterest"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!--/.product-share-->
+                    </div><!--/.modal-details-inner-->
+                </div>
+                <!--/.modal-details-->
+                <div class="clear"></div>
+            </div><!--/.modal-content-->
+        </div><!--/.modal-content-->
+    </div>
+    <!-- End Modal -->
+
+<footer>
+  
+  <div class="footer-bottom">
+    <div class="container">
+      <p class="pull-left"> &copy; 宁夏速扑信息科技有限公司 </p>
+    </div>
+  </div>
+  <!--/.footer-bottom--> 
+</footer>
+
+
+<!-- Le javascript
+================================================== --> 
+
+<!-- Placed at the end of the document so the pages load faster --> 
+<script type="text/javascript" src="assets/js/jquery/1.8.3/jquery.js"></script> 
+<script src="assets/bootstrap/js/bootstrap.min.js"></script> 
+
+<script>
+ // this script required for subscribe modal
+$(window).load(function(){
+ // full load
+ $('#modalAds').modal('show');
+ $('#modalAds').removeClass('hide');
+});
+
+</script>
+
+<!-- include jqueryCycle plugin --> 
+<script src="assets/js/jquery.cycle2.min.js"></script> 
+
+<!-- include easing plugin --> 
+<script src="assets/js/jquery.easing.1.3.js"></script> 
+
+<!-- include  parallax plugin --> 
+<script type="text/javascript"  src="assets/js/jquery.parallax-1.1.js"></script> 
+
+<!-- optionally include helper plugins --> 
+<script type="text/javascript"  src="assets/js/helper-plugins/jquery.mousewheel.min.js"></script> 
+
+<!-- include mCustomScrollbar plugin //Custom Scrollbar  --> 
+
+<script type="text/javascript" src="assets/js/jquery.mCustomScrollbar.js"></script> 
+
+<!-- include checkRadio plugin //Custom check & Radio  --> 
+<script type="text/javascript" src="assets/js/ion-checkRadio/ion.checkRadio.min.js"></script> 
+
+<!-- include grid.js // for equal Div height  --> 
+<script src="assets/js/grids.js"></script> 
+
+<!-- include carousel slider plugin  --> 
+<script src="assets/js/owl.carousel.min.js"></script> 
+
+<!-- jQuery minimalect // custom select   --> 
+<script src="assets/js/jquery.minimalect.min.js"></script> 
+
+<!-- include touchspin.js // touch friendly input spinner component   --> 
+<script src="assets/js/bootstrap.touchspin.js"></script> 
+
+<!-- include custom script for only homepage  --> 
+<script src="assets/js/home.js"></script> 
+<script src="assets/js/interface/index.js"></script>
+
+<!-- include custom script for site  --> 
+<script src="assets/js/script.js"></script> 
+
+</body>
+</html>
