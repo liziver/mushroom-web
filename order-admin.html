@@ -9,11 +9,10 @@
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
 <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
 <link rel="shortcut icon" href="assets/ico/favicon.png">
-<title>六盘山珍 </title>
+<title>六盘山珍</title>
 
 <!-- Bootstrap core CSS -->
 <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
-
 
 <!-- Custom styles for this template -->
 <link href="assets/css/style.css" rel="stylesheet">
@@ -21,13 +20,15 @@
 <!-- css3 animation effect for this template -->
 <link href="assets/css/animate.min.css" rel="stylesheet">
 
-<!-- styles needed by carousel slider -->
-<link href="assets/css/owl.carousel.css" rel="stylesheet">
-<link href="assets/css/owl.theme.css" rel="stylesheet">
 
 <!-- styles needed by checkRadio -->
 <link href="assets/css/ion.checkRadio.css" rel="stylesheet">
 <link href="assets/css/ion.checkRadio.cloudy.css" rel="stylesheet">
+
+<!-- styles needed by footable  -->
+<link href="assets/css/footable-0.1.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/footable.sortable-0.1.css" rel="stylesheet" type="text/css" />
+
 <!-- styles needed by mCustomScrollbar -->
 <link href="assets/css/jquery.mCustomScrollbar.css" rel="stylesheet">
 
@@ -50,10 +51,10 @@
 
 <script src="assets/js/pace.min.js"></script>
   </head>
-  
-  <body>
-    
-    
+<body>
+
+
+
 <!-- Modal Login start -->
 <div class="modal signUpContent fade" id="ModalLogin" tabindex="-1" role="dialog" >
   <div class="modal-dialog ">
@@ -246,197 +247,203 @@
   
 </div>
 <!-- /.Fixed navbar  -->
-<div class="container main-container headerOffset"> 
 
-<div class="row">
+
+<div class="container main-container headerOffset">
+  <div class="row">
+    <div class="breadcrumbDiv col-lg-12">
+      <ul class="breadcrumb">
+        <li> <a href="index.html">首页</a> </li>
+        <li> <a href="admin.html">管理员</a> </li>
+        <li class="active">订单管理</li>
+      </ul>
+    </div>
+  </div>
   
-   <div class="breadcrumbDiv col-lg-12">
-        <ul class="breadcrumb">
-          <li> <a href="index.html">首页</a> </li>
-          <li> <a href="account.html">账户管理</a> </li>
-          <li class="active"> 添加新地址</li>
-        </ul>
-      </div>
-      </div>
   
-
-
-    	
+  <div class="row col-lg-9 col-md-9 col-sm-7" >
+    <div class="col-lg-12 col-md-12 col-sm-100000">
+      <h1 class="section-title-inner"><span><i class="fa fa-list-alt"></i> 订单管理</span></h1>
+      <div class="row userInfo">
         
-      
-    
-      <div class="row">
-        <div class="col-lg-9 col-md-9 col-sm-7">
-        
-        	<h1 class="section-title-inner"><span><i class="fa fa-map-marker"></i> 添加新地址 </span></h1>
-        
-        	<div class="row userInfo">
-            
-      
-                
-                <div class="col-lg-12 col-xs-12">
-                    <h2 class="block-title-2"> 请填入以下信息 </h2>
-                    <p class="required"><sup>*</sup> 必填项目</p>
-                </div>
-                
-                <form>
-            
-            	<div class="col-xs-12 col-sm-6">
-                
-                    
-                    	<div class="form-group required">
-                            <label for="InputName">姓名 <sup>*</sup> </label>
-                            <input required type="text" class="form-control" id="InputName" placeholder="姓名">
-                          </div>
-                          
-                          <div class="form-group">
-                            <label for="InputCompany">公司</label>
-                            <input type="text" class="form-control" id="InputCompany" placeholder="公司">
-                          </div>
-                 
-                          
-                          <div class="form-group required">
-                            <label for="InputAddress">地址（第一行） <sup>*</sup>   </label>
-                            <input required type="text" class="form-control" id="InputAddress" placeholder="地址第一行">
-                          </div>
-                          <div class="form-group">
-                            <label for="InputAddress2">地址（第二行）</label>
-                            <input type="text" class="form-control" id="InputAddress2" placeholder="地址第二行">
-                          </div>
-                          
-                           <div class="form-group required">
-                            <label for="InputCity">城市 <sup>*</sup>   </label>
-                            <input required type="text" class="form-control" id="InputCity" placeholder="城市">
-                          </div>
-                          
-                          
-                           <div class="form-group required">
-                            <label for="State">省会 <sup>*</sup>   </label>
-                            <select required aria-required="true" id="State" name="State">
-                           <option value="">选择</option>
-                      <option value="1">北京</option>
-                      <option value="2">上海</option>
-                      <option value="3">天津</option>
-                      <option value="4">重庆</option>
-                      <option value="5">黑龙江</option>
-                      <option value="6">吉林</option>
-                      <option value="7">辽宁</option>
-                      <option value="8">内蒙古</option>
-                      <option value="53">河北</option>
-                      <option value="9">新疆</option>
-                      <option value="10">甘肃</option>
-                      <option value="11">陕西</option>
-                      <option value="12">宁夏</option>
-                      <option value="13">河南</option>
-                      <option value="14">山东</option>
-                      <option value="15">山西</option>
-                      <option value="16">安徽</option>
-                      <option value="17">湖北</option>
-                      <option value="18">湖南</option>
-                      <option value="19">江苏</option>
-                      <option value="20">四川</option>
-                      <option value="21">贵州</option>
-                      <option value="22">云南</option>
-                      <option value="23">广西</option>
-                      <option value="24">西藏</option>
-                      <option value="25">浙江</option>
-                      <option value="26">江西</option>
-                      <option value="27">广东</option>
-                      <option value="28">福建</option>
-                      <option value="29">台湾</option>
-                      <option value="30">海南</option>
-                      <option value="31">香港</option>
-                      <option value="32">澳门</option></select>
-                          </div>
-                          
-                          
-                                   
-                          <div class="form-group required">
-                            <label for="InputZip">邮编 <sup>*</sup>  </label>
-                            <input required type="text" class="form-control" id="InputZip" placeholder="邮编">
-                          </div>
-                          
-                          
-                          
-                       
-                          
-                      
-                      
+        <div class="col-xs-12 col-sm-12">
+          <table class="footable">
+            <thead>
+              <tr>
+                <th data-class="expand" data-sort-initial="true"> <span title="table sorted by this column on load">订单号</span> </th>
+                <th data-hide="phone,tablet" data-sort-ignore="true">商品名称</th>
+                <th data-hide="phone,tablet" data-sort-ignore="true">商品数量</th>
+                <th data-hide="phone,tablet" data-sort-ignore="true">商品单价</th>
+                <th data-hide="phone,tablet" data-sort-ignore="true">溯源码</th>
+                <th data-hide="phone,tablet" data-sort-ignore="true">用户名</th>
+                <th data-hide="phone,tablet" data-sort-ignore="true">送货地址</th>
+                <th data-hide="phone,tablet" data-sort-ignore="true">物流单号</th>
+                <th data-hide="phone,tablet" data-sort-ignore="true">发票单位</th>
+                <th data-hide="phone,tablet" data-sort-ignore="true">付款方式</th>
 
-                
-                
-                </div>
-                
-                
-                <div class="col-xs-12 col-sm-6">
-                
-                
-                	
-                        
-                          <div class="form-group">
-                            <label for="InputAdditionalInformation">备注信息</label>
-                            <textarea rows="3" cols="26" name="InputAdditionalInformation" class="form-control" id="InputAdditionalInformation"></textarea>
-                          </div>
-                          
-                          <div class="form-group required">
-                            <label for="InputMobile">手机 <sup>*</sup></label>
-                             <input  required type="tel"  name="InputMobile" class="form-control" id="InputMobile">
-
-                          </div>
-                          
-                          
-                          <div class="form-group required">
-                            <label for="addressAlias">地址名称 <sup>*</sup></label>
-                            
-                            <input required type="text" value="公司地址/家庭地址" name="addressAlias" class="form-control" id="addressAlias">
-                            
-                          </div>
-                          
-                          
-                         
-                     
-                        
-                                        
-                
-                </div>
-                
-                <div class="col-lg-12 col-xs-12 clearfix">
-                    <button type="submit" class="btn   btn-primary"><i class="fa fa-map-marker"></i> 保存地址</button>
-                </div>
-                
-                </form>
-                
-                
-                <div class="col-lg-12 col-xs-12  clearfix ">
-    
-                            <ul class="pager">
-                          <li class="previous pull-right"><a href="index.html"> <i class="fa fa-home"></i> 返回商城 </a></li>
-                          <li class="next pull-left"><a href="my-address.html">&larr; 返回我的地址</a></li>
-                          </ul>
-               </div>
-            
-            
-            
-            </div><!--/row end-->
-        	
-       
+                <th data-hide="default"> 金额</th>
+                <th data-hide="default" data-type="numeric"> 日期 </th>
+                <th data-hide="phone" data-type="numeric"> 订单状态 </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#028DE</td>
+                <td>5 <small>item(s)</small></td>
+                <td><a target="_blank" >-</a></td>
+                <td>Bank Wire</td>
+                <td>$403 </td>
+                <td data-value="78025368997">22 六月 2014</td>
+                <td data-value="3"><span class="label label-success">成功</span></td>
+              </tr>
+              <tr>
+                <td>#045YU</td>
+                <td>2 <small>item(s)</small></td>
+                <td><a target="_blank" >-</a></td>
+                <td>Bank Wire</td>
+                <td>$105 </td>
+                <td data-value="-100297281571">28 十月 2014</td>
+                <td data-value="1"><span class="label label-primary">进行中</span></td>
+              </tr>
+              <tr>
+                <td>#08UJL</td>
+                <td>6 <small>item(s)</small></td>
+                <td><a target="_blank" >-</a></td>
+                <td><a target="_blank" >PayPal</a></td>
+                <td><a target="_blank" >$550 </a></td>
+                <td data-value="370961043292">3 十月 2014</td>
+                <td data-value="2"><span class="label label-success">成功</span></td>
+              </tr>
+              <tr>
+                <td>#09ydo</td>
+                <td>1 <small>item(s)</small></td>
+                <td><a target="_blank" >-</a></td>
+                <td>Paypal</td>
+                <td>$34 </td>
+                <td data-value="-22133780420">19 四月 2014</td>
+                <td data-value="1"><span class="label label-primary">进行中</span></td>
+              </tr>
+              <tr>
+                <td>#EC089</td>
+                <td>8 <small>item(s)</small></td>
+                <td><a target="_blank" >-</a></td>
+                <td>MasterCard</td>
+                <td>$1108</td>
+                <td data-value="250833505574">13 十二月 2014</td>
+                <td data-value="3"><span class="label label-danger">取消</span></td>
+              </tr>
+              <tr>
+                <td>#OH746</td>
+                <td>4 <small>item(s)</small></td>
+                <td><a target="_blank" >-</a></td>
+                <td>Bank Wire</td>
+                <td>$669 </td>
+                <td data-value="694116650726">30 十二月 2014</td>
+                <td data-value="3"><span class="label label-danger">取消</span></td>
+              </tr>
+              <tr>
+                <td>#04628J</td>
+                <td>11 <small>item(s)</small></td>
+                <td><a target="_blank" >-</a></td>
+                <td>Bank Wire</td>
+                <td>$400 </td>
+                <td data-value="561440464855">17 十月 2014</td>
+                <td data-value="2"><span class="label label-default">失效</span></td>
+              </tr>
+              <tr>
+                <td>#046738</td>
+                <td>2 <small>item(s)</small></td>
+                <td><a target="_blank" >-</a></td>
+                <td><a target="_blank" >PayPal</a></td>
+                <td>$403 </td>
+                <td data-value="437400551390">11 十一月 2014</td>
+                <td data-value="3"><span class="label label-danger">取消</span></td>
+              </tr>
+              <tr>
+                <td>#08CRIS</td>
+                <td>3 <small>item(s)</small></td>
+                <td><a target="_blank" >-</a></td>
+                <td>Paypal</td>
+                <td>$105 </td>
+                <td data-value="-257733999319">1 十一月 2014</td>
+                <td data-value="3"><span class="label label-danger">取消</span></td>
+              </tr>
+              <tr>
+                <td>#1939HI</td>
+                <td>5 <small>item(s)</small></td>
+                <td><a target="_blank" >-</a></td>
+                <td>MasterCard</td>
+                <td><a target="_blank" >$550 </a></td>
+                <td data-value="362134712000">23 六月 2014</td>
+                <td data-value="1"><a target="_blank" ><span class="label label-primary">进行中</span></a></td>
+              </tr>
+              <tr>
+                <td>#518JOK</td>
+                <td>1 <small>item(s)</small></td>
+                <td><a target="_blank" >-</a></td>
+                <td>Bank Wire</td>
+                <td>$34 </td>
+                <td data-value="751149063430">20 十月 1993</td>
+                <td data-value="2"><span class="label label-default">失效</span></td>
+              </tr>
+              <tr>
+                <td>Isidra</td>
+                <td>12 <small>item(s)</small></td>
+                <td><a target="_blank" >-</a></td>
+                <td>Bank Wire</td>
+                <td>$1108</td>
+                <td data-value="550552096836">13 六月 1987</td>
+                <td data-value="3"><span class="label label-danger">取消</span></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-         <div class="col-lg-3 col-md-3 col-sm-5">
-         </div>
-         
-         
-      </div><!--/row-->
+        
+        <div class="col-lg-12 clearfix">
+          <ul class="pager">
+            <li class="previous pull-right"><a href="index.html"> <i class="fa fa-home"></i> 返回商城 </a></li>
+            <li class="next pull-left"><a href="account.html"> &larr; 返回账户管理</a></li>
+          </ul>
+        </div>
+      </div>
+      <!--/row end--> 
       
-      
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-5"> </div>
+  </div>
+  <!--/row-->
+        <div style="float:right;margin-top:50px;width:25%" class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title"> <a>搜索订单</a> </h4>
+          </div>
+          <div id="collapse2" class="panel-collapse collapse in">
+            <div class="panel-body">
+              <form class="form-horizontal">
+               <div class="input-group" style="margin-bottom:20px">
+                      <input type="text" class="form-control" placeholder="按单号搜索">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">搜索</button>
+                      </span>
 
+               </div>
+                <div class="input-group" style="margin-bottom:20px">
+                      <input type="text" class="form-control" placeholder="按用户搜索">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">搜索</button>
+                      </span>
+
+               </div>
+  </div><!-- /.col-lg-6 -->
+              </form>
+            </div>
+          </div>
+        </div>
+  
   <div style="clear:both"></div>
 </div>
-<!-- /wrapper --> 
+<!-- /main-container -->
 
 <div class="gap"> </div>
-
-
-
 
 <footer>
   
@@ -454,6 +461,17 @@
 <!-- Placed at the end of the document so the pages load faster --> 
 <script type="text/javascript" src="assets/js/jquery/1.8.3/jquery.js"></script> 
 <script src="assets/bootstrap/js/bootstrap.min.js"></script> 
+
+
+<!-- include footable plugin --> 
+<script src="assets/js/footable.js" type="text/javascript"></script> 
+<script src="assets/js/footable.sortable.js" type="text/javascript"></script> 
+<script type="text/javascript">
+    $(function() {
+      $('.footable').footable();
+    });
+  </script> 
+
 
 <!-- include  parallax plugin --> 
 <script type="text/javascript"  src="assets/js/jquery.parallax-1.1.js"></script> 
@@ -482,5 +500,6 @@
 
 <!-- include custom script for site  --> 
 <script src="assets/js/script.js"></script>
+
 </body>
 </html>
