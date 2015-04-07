@@ -263,7 +263,7 @@
           <div id="collapse2" class="panel-collapse collapse in">
             <div class="panel-body">
               <form class="form-horizontal">
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" id="newstitle">
               </form>
             </div>
           </div>
@@ -275,7 +275,7 @@
           <div id="collapse2" class="panel-collapse collapse in">
             <div class="panel-body">
               <form class="form-horizontal">
-                <textarea class="form-control" rows="20"></textarea>
+                <textarea class="form-control" rows="20" id="newscontent"></textarea>
               </form>
             </div>
           </div>
@@ -284,16 +284,27 @@
           <div class="panel-heading">
             <h4 class="panel-title"> <a>新闻图片</a> </h4>
           </div>
+          
+          
+          
           <div id="collapse2" class="panel-collapse collapse in">
             <div class="panel-body">
-              <form class="form-horizontal">
-                <input type="file">
+            	
+              <form class="form-horizontal" enctype="multipart/form-data" id="newsimg_uploadform" target="id_iframe">
+                <label for="file">Filename:</label>
+								<input type="file" name="file" id="file" /> 
+								<input type="submit" name="submit" value="Submit" id="newsimg_submit"/>
               </form>
+              <iframe id="id_iframe" name="id_iframe" style="display:none;"></iframe>
             </div>
+            <div id="imgpath" name="imgpath"></div>
           </div>
+           
+          
+          
         </div>
         <div class="col-md-4">
-            <button id="" name="singlebutton" class="btn btn-primary">保存</button>
+            <button id="newssave" name="singlebutton" class="btn btn-primary">保存</button>
            </div>
           <div class="clear clearfix"> </div>
         </div>
@@ -351,7 +362,14 @@
 <!-- include touchspin.js // touch friendly input spinner component   --> 
 <script src="assets/js/bootstrap.touchspin.js"></script> 
 
+<!-- include custom script for only news-edit --> 
+<script src="assets/js/news-edit.js"></script> 
+<script src="assets/js/jquery/jquery.form.js"></script> 
+
 <!-- include custom script for site  --> 
 <script src="assets/js/script.js"></script>
+
+
+
 </body>
 </html>

@@ -33,21 +33,20 @@ $a2=mysql_query($sql,$con) or die;
 
 if($row2=mysql_fetch_array($a2))
 {
-	//$_SESSION['YHID'] = $row2["YHID"];
-	echo json_encode(array('status'=>0, 
-						   'cp_name'=>$row2["产品名称"],
-						   'cp_detail'=>$row2["产品简介"],
-						   'cp_selled_count'=>$row2["总销售量"],
-						   'cp_comment'=>$row2["评论总数"],
-						   'cp_image'=>$row2["展示图片"],
-						   'cp_price'=>$row2["单价"],
-						   'cp_spec'=>$row2["规格"],
-						   'cp_stock'=>$row2["库存"],
-						   'cp_discount'=>$row2["折扣"],
-						   ));
+	$tmp = array('cp_name'=>$row2["产品名称"],
+				 'cp_detail'=>$row2["产品简介"],
+				 'cp_selled_count'=>$row2["总销售量"],
+				 'cp_comment'=>$row2["评论总数"],
+			     'cp_image'=>$row2["展示图片"],
+			     'cp_price'=>$row2["单价"],
+			     'cp_spec'=>$row2["规格"],
+			     'cp_stock'=>$row2["库存"],
+				 'cp_discount'=>$row2["折扣"],
+				 );
+	echo json_encode(array('status' => 0, 'data' => $tmp));
 }
 else{
-	echo json_encode(array('status'=>601, 'msg'=>'INTERNAL ERROR'));
+	echo json_encode(array('status'=>999, 'msg'=>'No this merchandise!'));
 }
 
 mysql_close($con);

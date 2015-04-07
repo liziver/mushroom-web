@@ -146,24 +146,6 @@ $(document).ready(function () {
   Star Products 
 ----------------------------*/
 
-/*		function showHotItem(){
-
-
-			var xmlhttp;
-			xmlhttp = new XMLHttpRequest();
-			xmlhttp.onreadystatechange = function(){
-				if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
-						var response = xmlhttp.responseText;
-						document.getElementById("#test").innerHTML=xmlhttp.responseText;
-				};
-			};
-			xmlhttp.open("GET","./API/star_merchandise.php?",true);
-			xmlhttp.send();
-	
-		};	*/
-		
-//	})
-
 
 
 
@@ -241,22 +223,6 @@ $(document).ready(function () {
 					 
 					   
 		  });
-
-
-
-
-
-
-
-			
-			
-
-
-
-
-
-
-
 
 
 

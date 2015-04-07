@@ -68,7 +68,6 @@ if($row2=mysql_fetch_array($a2))
 	$_SESSION['islogin'] = 1;
 	$key = sha1(time().rand(10000,99999));
 	$_SESSION['sha1'] = $key;
-	$_SESSION['YHID'] = $row2["YHID"];
 	echo json_encode(array('status'=>0, 'key'=>$key));
 }
 else{

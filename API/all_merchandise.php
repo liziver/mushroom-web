@@ -17,7 +17,6 @@ $db_port = $settings->get('db.port');
 $db_username = $settings->get('db.username');
 $db_scheme = $settings->get('db.name');
 $db_password = $settings->get('db.password');
-
 $type = $_REQUEST["type"];
 $type = intval($type);
 $startid = intval($_REQUEST["startid"]);
@@ -26,7 +25,8 @@ if(0 == $limit){
 	$limit += 1;
 };
 
-$sql = "SELECT * FROM mushroom_cp where isstar=1 and 产品类别=" . $type . ' AND CPID > ' . $startid . ' LIMIT ' . $limit;
+
+$sql = "SELECT * FROM mushroom_cp WHERE 产品类别=" . $type . ' AND CPID > ' . $startid . ' LIMIT ' . $limit;
 
 $con = mysql_connect($db_host . ':' . $db_port,$db_username,$db_password);
 
