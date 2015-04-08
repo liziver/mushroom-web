@@ -10,11 +10,20 @@
 <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
 <link rel="shortcut icon" href="assets/ico/favicon.png">
 <title>六盘山珍</title>
+
 <!-- Bootstrap core CSS -->
 <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
 <link href="assets/css/style.css" rel="stylesheet">
+
+<!-- css3 animation effect for this template -->
+<link href="assets/css/animate.min.css" rel="stylesheet">
+
+
+<!-- styles needed by checkRadio -->
+<link href="assets/css/ion.checkRadio.css" rel="stylesheet">
+<link href="assets/css/ion.checkRadio.cloudy.css" rel="stylesheet">
 
 <!-- styles needed by footable  -->
 <link href="assets/css/footable-0.1.css" rel="stylesheet" type="text/css" />
@@ -22,11 +31,6 @@
 
 <!-- styles needed by mCustomScrollbar -->
 <link href="assets/css/jquery.mCustomScrollbar.css" rel="stylesheet">
-
-<!-- styles needed by mCustomScrollbar -->
-<link href="assets/css/ion.checkRadio.css" rel="stylesheet">
-<link href="assets/css/ion.checkRadio.cloudy.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="assets/css/jquery.minimalect.min.css" media="screen" />
 
 
 <!-- Just for debugging purposes. -->
@@ -47,8 +51,9 @@
 
 <script src="assets/js/pace.min.js"></script>
   </head>
-
 <body>
+
+
 
 <!-- Modal Login start -->
 <div class="modal signUpContent fade" id="ModalLogin" tabindex="-1" role="dialog" >
@@ -243,109 +248,168 @@
 </div>
 <!-- /.Fixed navbar  -->
 
+
 <div class="container main-container headerOffset">
   <div class="row">
     <div class="breadcrumbDiv col-lg-12">
       <ul class="breadcrumb">
         <li> <a href="index.html">首页</a> </li>
         <li> <a href="admin.html">管理员</a> </li>
-        <li> <a href="order-admin.html">订单管理</a> </li>
-        <li> <a href="order-edit.html">订单编辑</a> </li>
+        <li class="active">产品管理</li>
       </ul>
     </div>
   </div>
-  <div class="row">
-    <div class="col-lg-9 col-md-9 col-sm-7">
-      <h1 class="section-title-inner"><span><i class="fa fa-pencil-square-o"></i> 订单编辑 </span></h1>
+  
+  
+  <div class="row col-lg-9 col-md-9 col-sm-7" >
+    <div class="col-lg-12 col-md-12 col-sm-100000">
+      <h1 class="section-title-inner"><span><i class="fa fa-list-alt"></i> 订单管理</span></h1>
       <div class="row userInfo">
+        
         <div class="col-xs-12 col-sm-12">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title"> <a>订单详情</a> </h4>
-          </div>
-          <div id="collapse2" class="panel-collapse collapse in">
-            <div class="panel-body">
-               <table class="footable">
-                <thead>
-                  <tr>
-                    <th>项目</th>
-                    <th>详情</th>
-                  </tr>
-                </thead>
-                  <tr>
-                    <td>订单号</td>
-                    <td>#234563</td>
-                  </tr>
-                  <tr>
-                    <td>生成日期</td>
-                    <td>2015-01-01</td>
-                  </tr>
-                  <tr>
-                    <td>金额</td>
-                    <td>￥80</td>
-                  </tr>
-                  <tr>
-                    <td>商品名称</td>
-                    <td>精装鸡腿菇</td>
-                  </tr>
-                  <tr>
-                    <td>商品数量</td>
-                    <td>4</td>
-                  </tr>
-                  <tr>
-                    <td>商品单价</td>
-                    <td>￥20</td>
-                  </tr>
-                  <tr>
-                    <td>溯源码</td>
-                    <td>1000000000</td>
-                  </tr>
-                  <tr>
-                    <td>用户名</td>
-                    <td>张三</td>
-                  </tr>
-                  <tr>
-                    <td>送货地址</td>
-                    <td>银川市新华街123号</td>
-                  </tr>
-                  <tr>
-                    <td>物流单号</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>发票单位</td>
-                    <td>123公司</td>
-                  </tr>
-                  <tr>
-                    <td>付款方式</td>
-                    <td>支付宝</td>
-                  </tr>
-                  <tr>
-                    <td>订单状态</td>
-                    <td>已付款</td>
-                  </tr>
-                  <tr>
-                    <td>更改状态</td>
-                    <td>                  
-                    <div class="form-group">
+          <table class="footable">
+            <thead>
+              <tr>
+                <th data-class="expand" data-sort-initial="true"> <span title="table sorted by this column on load">订单号</span> </th>
+                <th data-hide="phone,tablet" data-sort-ignore="true">商品名称</th>
+                <th data-hide="phone,tablet" data-sort-ignore="true">商品数量</th>
+                <th data-hide="phone,tablet" data-sort-ignore="true">商品单价</th>
+                <th data-hide="phone,tablet" data-sort-ignore="true">溯源码</th>
+                <th data-hide="phone,tablet" data-sort-ignore="true">用户名</th>
+                <th data-hide="phone,tablet" data-sort-ignore="true">送货地址</th>
+                <th data-hide="phone,tablet" data-sort-ignore="true">物流单号</th>
+                <th data-hide="phone,tablet" data-sort-ignore="true">发票单位</th>
+                <th data-hide="phone,tablet" data-sort-ignore="true">付款方式</th>
+                <th data-hide="default"> 金额</th>
+                <th data-hide="default" data-type="numeric"> 日期 </th>
+                <th data-hide="phone" data-type="numeric"> 订单状态 </th>
+                <th data-hide="phone" sort-ignore="true"> 编辑 </th>
 
-                      <select id="dropdown" name="selectbasic" class="form-control">
-                        <option value="1">通过审核</option>
-                        <option value="2">已发货</option>
-                        <option value="3">删除订单</option>
-                      </select>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#028DE</td>
+                <td>四只精装鸡腿菇</td>
+                <td>3</td>
+                <td>￥20</td>
+                <td>1000000000</td>
+                <td>abc</td>
+                <td>银川市解放街123号</td>
+                <td>1234567</td>
+                <td>abc公司</td>
+                <td>货到付款</td>
+                <td>￥60</td>
+                <td data-value="78025368997">22 六月 2014</td>
+                <td data-value="1"><span class="label label-success">成功</span></td>
+                <td style="text-align:center"><a href="order-edit.html"><i class="fa fa-pencil-square-o"></i></a></td>
+              </tr>
+              <tr>
+                <td>#028DE</td>
+                <td>四只精装鸡腿菇</td>
+                <td>3</td>
+                <td>￥20</td>
+                <td>1000000000</td>
+                <td>abc</td>
+                <td>银川市解放街123号</td>
+                <td>1234567</td>
+                <td>abc公司</td>
+                <td>货到付款</td>
+                <td>￥60</td>
+                <td data-value="78025368997">22 六月 2014</td>
+                <td data-value="1"><span class="label label-primary">已付款</span></td>
+                <td style="text-align:center"><a href="order-edit.html"><i class="fa fa-pencil-square-o"></i></a></td>
+              </tr>
+              <tr>
+                <td>#028DE</td>
+                <td>四只精装鸡腿菇</td>
+                <td>3</td>
+                <td>￥20</td>
+                <td>1000000000</td>
+                <td>abc</td>
+                <td>银川市解放街123号</td>
+                <td>1234567</td>
+                <td>abc公司</td>
+                <td>货到付款</td>
+                <td>￥60</td>
+                <td data-value="78025368997">22 六月 2014</td>
+                <td data-value="1"><span class="label label-default">未付款</span></td>
+                <td style="text-align:center"><a href="order-edit.html"><i class="fa fa-pencil-square-o"></i></a></td>
+              </tr>
+              <tr>
+                <td>#028DE</td>
+                <td>四只精装鸡腿菇</td>
+                <td>3</td>
+                <td>￥20</td>
+                <td>1000000000</td>
+                <td>abc</td>
+                <td>银川市解放街123号</td>
+                <td>1234567</td>
+                <td>abc公司</td>
+                <td>货到付款</td>
+                <td>￥60</td>
+                <td data-value="78025368997">22 六月 2014</td>
+                <td data-value="1"><span class="label label-info">已通过审核</span></td>
+                <td style="text-align:center"><a href="order-edit.html"><i class="fa fa-pencil-square-o"></i></a></td>
+              </tr>
+              <tr>
+                <td>#028DE</td>
+                <td>四只精装鸡腿菇</td>
+                <td>3</td>
+                <td>￥20</td>
+                <td>1000000000</td>
+                <td>abc</td>
+                <td>银川市解放街123号</td>
+                <td>1234567</td>
+                <td>abc公司</td>
+                <td>货到付款</td>
+                <td>￥60</td>
+                <td data-value="78025368997">22 六月 2014</td>
+                <td data-value="1"><span class="label label-warning">已发货</span></td>
+                <td style="text-align:center"><a href="order-edit.html"><i class="fa fa-pencil-square-o"></i></a></td>
+              </tr>
+              <tr>
+                <td>#028DE</td>
+                <td>四只精装鸡腿菇</td>
+                <td>3</td>
+                <td>￥20</td>
+                <td>1000000000</td>
+                <td>abc</td>
+                <td>银川市解放街123号</td>
+                <td>1234567</td>
+                <td>abc公司</td>
+                <td>货到付款</td>
+                <td>￥60</td>
+                <td data-value="78025368997">22 六月 2014</td>
+                <td data-value="1"><span class="label label-danger">已取消</span></td>
+                <td style="text-align:center"><a href="order-edit.html"><i class="fa fa-pencil-square-o"></i></a></td>
+              </tr>
+              <tr>
+                <td>#028DE</td>
+                <td>四只精装鸡腿菇</td>
+                <td>3</td>
+                <td>￥20</td>
+                <td>1000000000</td>
+                <td>abc</td>
+                <td>银川市解放街123号</td>
+                <td>1234567</td>
+                <td>abc公司</td>
+                <td>货到付款</td>
+                <td>￥60</td>
+                <td data-value="78025368997">22 六月 2014</td>
+                <td data-value="1"><span class="label label-success">成功</span></td>
+                <td style="text-align:center"><a href="order-edit.html"><i class="fa fa-pencil-square-o"></i></a></td>
+              </tr>
 
-                  </div></td>
-                  </tr>
 
-               </table>
-            </div>
-          </div>
+            </tbody>
+          </table>
         </div>
-        <div class="col-md-4">
-            <button id="" name="singlebutton" class="btn btn-primary">保存</button>
-           </div>
-          <div class="clear clearfix"> </div>
+        
+        <div class="col-lg-12 clearfix">
+          <ul class="pager">
+            <li class="next pull-left"><a href="account.html"> &larr; 返回管理员</a></li>
+          </ul>
         </div>
       </div>
       <!--/row end--> 
@@ -354,10 +418,37 @@
     <div class="col-lg-3 col-md-3 col-sm-5"> </div>
   </div>
   <!--/row-->
+        <div style="float:right;margin-top:50px;width:25%" class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title"> <a>搜索订单</a> </h4>
+          </div>
+          <div id="collapse2" class="panel-collapse collapse in">
+            <div class="panel-body">
+              <form class="form-horizontal">
+               <div class="input-group" style="margin-bottom:20px">
+                      <input type="text" class="form-control" placeholder="按单号搜索">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">搜索</button>
+                      </span>
+
+               </div>
+                <div class="input-group" style="margin-bottom:20px">
+                      <input type="text" class="form-control" placeholder="按用户搜索">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">搜索</button>
+                      </span>
+
+               </div>
+  </div><!-- /.col-lg-6 -->
+              </form>
+            </div>
+          </div>
+        </div>
   
   <div style="clear:both"></div>
 </div>
-<!-- /wrapper -->
+<!-- /main-container -->
+
 <div class="gap"> </div>
 
 <footer>
@@ -369,12 +460,24 @@
   </div>
   <!--/.footer-bottom--> 
 </footer>
+
 <!-- Le javascript
 ================================================== --> 
 
 <!-- Placed at the end of the document so the pages load faster --> 
 <script type="text/javascript" src="assets/js/jquery/1.8.3/jquery.js"></script> 
 <script src="assets/bootstrap/js/bootstrap.min.js"></script> 
+
+
+<!-- include footable plugin --> 
+<script src="assets/js/footable.js" type="text/javascript"></script> 
+<script src="assets/js/footable.sortable.js" type="text/javascript"></script> 
+<script type="text/javascript">
+    $(function() {
+      $('.footable').footable();
+    });
+  </script> 
+
 
 <!-- include  parallax plugin --> 
 <script type="text/javascript"  src="assets/js/jquery.parallax-1.1.js"></script> 
@@ -403,9 +506,6 @@
 
 <!-- include custom script for site  --> 
 <script src="assets/js/script.js"></script>
-<!-- actions responding to seletor -->
-<script>
-console.log($("dropdown").change)
-</script>
+
 </body>
 </html>
