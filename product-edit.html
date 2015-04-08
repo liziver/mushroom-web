@@ -10,6 +10,10 @@
 <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
 <link rel="shortcut icon" href="assets/ico/favicon.png">
 <title>六盘山珍</title>
+
+<!---jquery-->
+<script type="text/javascript" src="assets/js/jquery/1.8.3/jquery.js"></script> 
+<script src="assets/bootstrap/js/bootstrap.min.js"></script> 
 <!-- Bootstrap core CSS -->
 <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
 
@@ -28,8 +32,6 @@
 <link href="assets/css/ion.checkRadio.cloudy.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="assets/css/jquery.minimalect.min.css" media="screen" />
 
-<!---loading script---->
-<script type="text/javascript" src="assets/js/jquery/1.8.3/jquery.js"></script> 
 
 <!-- Just for debugging purposes. -->
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -39,21 +41,16 @@
 <![endif]-->  
 
 <!-- include pace script for automatic web page progress bar  -->
-<style>
-.inputCell{
-  width:80%;
-}
-.deleteButton{
-  margin-left: 20px;
-  color: "red"
-}
-</style>
+
 
  <script>
     paceOptions = {
       elements: true
     };
 </script>
+<style>
+
+</style>
 
 <script src="assets/js/pace.min.js"></script>
   </head>
@@ -259,78 +256,84 @@
       <ul class="breadcrumb">
         <li> <a href="index.html">首页</a> </li>
         <li> <a href="admin.html">管理员</a> </li>
-        <li> <a href="order-edit.html">溯源管理</a> </li>
+        <li> <a href="order-admin.html">产品管理</a> </li>
+        <li class="active">产品编辑</li>
       </ul>
     </div>
   </div>
   <div class="row">
     <div class="col-lg-9 col-md-9 col-sm-7">
-      <h1 class="section-title-inner"><span><i class="fa fa-pencil-square-o"></i> 溯源管理 </span></h1>
+      <h1 class="section-title-inner"><span><i class="fa fa-pencil-square-o"></i> 产品编辑 </span></h1>
+      <p>双击条目进行修改</p>
       <div class="row userInfo">
         <div class="col-xs-12 col-sm-12">
-          <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title"> <a>溯源码查询</a> </h4>
-          </div>
-          <div class="panel-body">
-          <h1 class="section-title-inner">输入X位数字溯源码</span> </h1>
-          <form role="form">
-            <div class="form-group">
-              <input  type="text" class="form-control" id="exampleInputEmail1" placeholder="溯源码">
-            </div>
-            <button type="submit" class="btn   btn-primary"> <i class="fa fa-search"></i> 查询 </button>
-          </form>
-        </div>
-        </div>
-
-
-
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h4 class="panel-title"> <a>溯源信息</a> </h4>
+            <h4 class="panel-title"> <a>产品详情</a> </h4>
           </div>
           <div id="collapse2" class="panel-collapse collapse in">
             <div class="panel-body">
-               <table id="infoTable" class="footable">
+               <table class="footable">
                 <thead>
                   <tr>
-                    <th>时间</th>
-                    <th>步骤</th>
+                    <th>项目</th>
+                    <th>详情</th>
                   </tr>
                 </thead>
                   <tr>
-                    <td>2015-1-1 14:21:11</td>
-                    <td><input class="inputCell" type="text" value="培养基制造完成，配料：玉米杆"><span><button type="button"class="deleteButton btn btn-danger"><i class="fa fa-minus-circle "></i></button></span></td>
+                    <td>产品名称</td>
+                    <td class="editable"><input type="text" style="display: none"></input><button type="button" class="btn btn-primary" style="display:none;margin-left:40px"><i class="fa fa-check-circle"></i></button><p>#234563</p></td>
                   </tr>
                   <tr>
-                   <td>2015-1-1 14:21:11</td>
-                    <td><input class="inputCell" type="text" value="产品植入成功，放入培养室"><span><button type="button"class="deleteButton btn btn-danger"><i class="fa fa-minus-circle "></i></button></span></td>
+                    <td>产品简介</td>
+                    <td class="editable"><input type="text" style="display: none"></input><button type="button" class="btn btn-primary" style="display:none;margin-left:40px"><i class="fa fa-check-circle"></i></button><p>#234563</p></td>
                   </tr>
                   <tr>
-                    <td>2015-1-1 14:21:11</td>
-                    <td><input class="inputCell" type="text" value="转入出库车间"><span><button type="button"class="deleteButton btn btn-danger"><i class="fa fa-minus-circle "></i></button></span></td>
+                    <td>单价</td>
+                    <td class="editable"><input type="text" style="display: none"></input><button type="button" class="btn btn-primary" style="display:none;margin-left:40px"><i class="fa fa-check-circle"></i></button><p>#234563</p></td>
                   </tr>
                   <tr>
-                    <td>2015-1-1 14:21:11</td>
-                    <td><input class="inputCell" type="text" value="转入包装车间"><span><button type="button"class="deleteButton btn btn-danger"><i class="fa fa-minus-circle "></i></button></span></td>
+                    <td>规格</td>
+                    <td class="editable"><input type="text" style="display: none"></input><button type="button" class="btn btn-primary" style="display:none;margin-left:40px"><i class="fa fa-check-circle"></i></button><p>#234563</p></td>
                   </tr>
                   <tr>
-                    <td>2015-1-1 14:21:11</td>
-                    <td><input class="inputCell" type="text" value="产品包装完成"><span><button type="button"class="deleteButton btn btn-danger"><i class="fa fa-minus-circle "></i></button></span></td>
+                    <td>库存</td>
+                    <td class="editable"><input type="text" style="display: none"></input><button type="button" class="btn btn-primary" style="display:none;margin-left:40px"><i class="fa fa-check-circle"></i></button><p>#234563</p></td>
                   </tr>
                   <tr>
-                    <td>2015-1-1 14:21:11</td>
-                    <td><input class="inputCell" type="text" value="产品订单形成，订单号：123456"><span><button type="button"class="deleteButton btn btn-danger"><i class="fa fa-minus-circle "></i></button></span></td>
+                    <td>折扣</td>
+                    <td class="editable"><input type="text" style="display: none"></input><button type="button" class="btn btn-primary" style="display:none;margin-left:40px"><i class="fa fa-check-circle"></i></button><p>#234563</p></td>
+                  </tr>
+                  <tr>
+                    <td>销量</td>
+                    <td>1000000000</td>
+                  </tr>
+                  <tr>
+                    <td>评论总数</td>
+                    <td>张三</td>
+                  </tr>
+                  <tr>
+                    <td>ID</td>
+                    <td>银川市新华街123号</td>
                   </tr>
                </table>
             </div>
           </div>
         </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title"> <a>产品图片</a> </h4>
+          </div>
+            <div class="panel-body">
+               <div>
+                <img src="images/product/5.jpg">
+               </div>
+               <input style = "margin-top:20px"type="file">上传图片</input>
+            </div>
+          </div>
+        </div>
         <div class="col-md-4">
-            <button id="save" name="singlebutton" class="btn btn-primary">保存</button>
-           </div>
-        <div style="float:right" class="col-md-4">
-            <button style="float:right" id="addButton" onclick="appendDOM" name="singlebutton" class="btn btn-primary">添加记录</button>
+            <button id="" name="singlebutton" class="btn btn-primary">保存</button>
            </div>
           <div class="clear clearfix"> </div>
         </div>
@@ -362,34 +365,33 @@
 <!-- Placed at the end of the document so the pages load faster --> 
 <script>
 
+$(".editable").dblclick(function(){
+  var input = $(this).children("input"),
+      para = $(this).children("p"),
+      button  = $(this).children("button")
+      paraText = para.html();
+    console.log(paraText)
+    input.val(paraText);
+
+    input.toggle();
+    para.toggle();
+    button.toggle();
+  
 
 
-     var appendDOM = function(){
-        var deleteButton;
+  button.click(function(){
+     var text = input.val();
+     para.html(text);
 
-        var template = "<tr><td></td><td><input class='inputCell' type='text'><span><button type='button' class='deleteButton btn btn-danger'><i class='fa fa-minus-circle'></i></button></span></td></tr>",
-            Dom = $(template)
-            dt = new Date($.now()),
-            time = dt.getFullYear()+"-"+ dt.getMonth()+"-"+ dt.getDate()+" "+ dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+    input.toggle();
+    para.toggle();
+    button.toggle();
+  });
 
-        $("#infoTable").append(Dom)
+});
 
-        Dom.find(">:first-child").html(time);
-
-        deleteButton = $(".deleteButton");
-
-     };
-     
-     $("#addButton").click(appendDOM);
-
-     deleteButton.click(function(){
-        $(this).parents("tr").remove()
-     })
-     //need to work with savebutton later
-     //bug: can't delete newly added item
 </script>
 
-<script src="assets/bootstrap/js/bootstrap.min.js"></script> 
 
 <!-- include  parallax plugin --> 
 <script type="text/javascript"  src="assets/js/jquery.parallax-1.1.js"></script> 
